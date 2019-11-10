@@ -42,6 +42,7 @@ function calculateAverageRating(){
 function getAverageMark(marks){
     // код для задачи №2 писать здесь
     //return averageMark;
+    'use strict';
     let sum = 0;
     if (marks.length > 5) {
        marks.splice(5)
@@ -65,6 +66,7 @@ function askDrink(name,dateOfBirthday){
     // код для задачи №3 писать здесь
     //console.log(result)
     //return result;
+    'use strict';
     let today = new Date().getFullYear();
     let BirthdayYear = dateOfBirthday.getFullYear();
     let age = today - BirthdayYear;
