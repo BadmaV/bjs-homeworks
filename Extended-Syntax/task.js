@@ -50,7 +50,7 @@ function getAverageMark(marks){
     for (let i = 0; i < marks.length; i++) {
        sum += marks[i];
     } 
-    let averageMark = `Средний бал: ${sum / marks.length}`;
+    let averageMark = `Средний балл: ${sum / marks.length}`;
     return averageMark;
 }
 
