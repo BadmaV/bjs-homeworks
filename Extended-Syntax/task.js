@@ -42,6 +42,16 @@ function calculateAverageRating(){
 function getAverageMark(marks){
     // код для задачи №2 писать здесь
     //return averageMark;
+    let sum = 0;
+    if (marks.length > 5) {
+       marks.splice(5)
+       console.log('слишком много оценок!');
+    }
+    for (let i = 0; i < marks.length; i++) {
+       sum += marks[i];
+    } 
+    let averageMark = `Средний бал: ${sum / marks.length}`;
+    return averageMark;
 }
 
 function calculateDrinkTask(){
