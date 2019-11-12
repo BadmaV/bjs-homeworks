@@ -18,16 +18,14 @@ function getResult(a,b,c){
     let discrim = b ** 2 - 4 * a * c;
     let arr = [];
 
-    if (discrim < 0) {
-        return arr;
-    } else if (discrim === 0) {
+    if (discrim === 0) {
         arr.push(-b / 2 * a);
-        return arr;
     } else {
         arr.push((-b + Math.sqrt(discrim)) / (2 * a));
         arr.push((-b - Math.sqrt(discrim)) / (2 * a));
-        return arr;
     }
+
+    return arr;
 
     getResult(2, 4, -3);
 
