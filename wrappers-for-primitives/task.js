@@ -29,7 +29,7 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
 
     let today = +new Date();
     let payDate = +new Date(date);
-    let months = ( payDate - today ) / ( 1000 * 60 * 60 * 24 * 30 );
+    let months = (payDate - today) / (1000 * 60 * 60 * 24 * 30);
 
     let monthPrcnt = percent / 1200;
     let payMonth =  (amount - contribution) * (monthPrcnt + monthPrcnt / (((1 + monthPrcnt)**12) - 1));
