@@ -50,7 +50,7 @@ function getGreeting(name) {
 
     let greeting;
 
-    if ( typeof(name === null || name === "") {
+    if (typeof(name === null || name === '') {
     	greeting = 'Привет, мир! Меня зовут Аноним.';
     } else {
     	greeting = `Привет, мир! Меня зовут ${name}.`;
