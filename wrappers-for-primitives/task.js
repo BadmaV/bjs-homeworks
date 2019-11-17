@@ -50,7 +50,7 @@ function getGreeting(name) {
 
     let greeting;
 
-    if ( typeof(name === 'undefined') || name === null || name === "") {
+    if ( typeof(name === null || name === "") {
     	greeting = 'Привет, мир! Меня зовут Аноним.';
     } else {
     	greeting = `Привет, мир! Меня зовут ${name}.`;
@@ -59,3 +59,5 @@ function getGreeting(name) {
 }
 
 console.log(getGreeting());
+
+
