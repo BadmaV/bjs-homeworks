@@ -1,3 +1,5 @@
+// Задание 1
+
 class Weapon {
   constructor (options) {
     this.source = options;
@@ -129,7 +131,7 @@ console.log(swordOfTheThousandTruths);
 console.log(staffOfTheStorm);
 
 
-//-------------------------Задание 2-----------------------------------
+//Задание 2
 
 class newBow extends Weapon {
   constructor() {
@@ -222,7 +224,7 @@ bigStaffOfTheStorm.takeDamage(295); //Ломаем посох почти до к
 console.log(bigStaffOfTheStorm.getDamage()); //Должно вернуться половина значения дамага, т.е. 5
 
 
-//-------------------------------Задание 3-------------------------------------------
+//Задание 3
 
 class StudentLog {
   constructor(name) {
