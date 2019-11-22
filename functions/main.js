@@ -40,38 +40,40 @@ function showSolutionsMessage( a, b, c ) {
 
 showSolutionsMessage(2, 4, 2);
 
+
 // Задание 2
-function getAverageScore(data) {
-    let averageMark = {};
-    for (let prop in data) {
-      let value = 0;
-      for (let i=0; i < data[prop].length; i++) {
-        value += data[prop][i];
+
+function getAverageScore(data) {   //объявляем функцию высчитывающую средний балл с параметром data
+    let averageMark = {};          //создаем объект с средними оценками
+    for (let prop in data) {       //создаем цикл for
+      let value = 0;               //объявляем переменную value 
+      for (let i=0; i < data[prop].length; i++) { //вложенный цикл for считающий до длины массива data
+        value += data[prop][i];    //value увеличиваем на текущий индекс массива data  
       }
-      averageMark[prop] = value / data[prop].length;
+      averageMark[prop] = value / data[prop].length; //что такое prop не понятно
     } 
-    return averageMark;
+    return averageMark;            //возвращаем из функции объект с средней оценкой.
   } 
   
   
-  function getAverageMarks(data) {
-    let averageMarks = getAverageScore(data); 
-    let sum = 0;
-    let items = 0;
-    for (let prop in averageMarks) {
-      sum += averageMarks[prop];
-      items++;
+  function getAverageMarks(data) { //объявляем функцию с средними оценками с параметром data
+    let averageMarks = getAverageScore(data); //создаем переменную и присваиваем ей значение предыдущей функции
+    let sum = 0;                   //создаем переменную sum с значением 0
+    let items = 0;                 //создаем переменную items = 0
+    for (let prop in averageMarks) { //цикл for in. его не разобрал
+      sum += averageMarks[prop];   //переменную sum увеличиваем. prop не понятно 
+      items++;                     //увеличиваем значение переменной items на 1
     }
   
-    let average = sum / items;
-    averageMarks.average = average;
-    return averageMarks;
+    let average = sum / items;     //объявляем переменную average и присваиваем результат деления sum items
+    averageMarks.average = average;//ключу объекта averageMarks присваиваем значение переменной average
+    return averageMarks;           //возвращаем из функции объект averageMarks 
   }
   
-  getAverageMarks({
-    algebra: [5, 4, 5, 3, 5],
+  getAverageMarks({                //вызов функции getAverageMarks с аргументом
+    algebra: [5, 4, 5, 3, 5],      //ключ - algebra, значение - массив оценок
     biology: [5, 4, 5, 3, 5, 3, 4, 4, 4, 4],
-    russian: [5, 4, 5, ],
+    russian: [5, 4, 5, ],          
     english: [5, 4, 5, 3, 5, 4],
     poetry: [5, 4, 5, 3, 5, 5],
     music: [3, 5, 4, 5 ]
