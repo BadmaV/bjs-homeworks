@@ -1,6 +1,8 @@
+// 16.12.2019
+
 let setDailyRhythm = (wakeUpTime, bedTime) => {
   const goodMorning = () => alert('Доброе утро!');
-  const goToBed = () => alert('Пора спать!');
+  const goToBed = () => alert('Пора спать!!!');
 
   checkTimeMorning = setAlarm(wakeUpTime, goodMorning);
   checkTimeEvening = setAlarm(bedTime, goToBed);
@@ -17,7 +19,7 @@ let setAlarm = (time, callback) => {
     if (hours < 10) {
         hours = '0' + hours;
     } else if (min < 10) {
-        min = '0' + min
+        min = '0' + min;
     }
   let currentTime = hours + ':' + min;
 
@@ -28,6 +30,21 @@ let setAlarm = (time, callback) => {
 }
 
 setDailyRhythm('08:00', '23:15');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*let date = new Date();
 text = date.getFullYear(); 
